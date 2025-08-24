@@ -1,0 +1,121 @@
+/* ItemsPage.css */
+
+/* Container for the page */
+.items-container {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+/* Page heading */
+.items-container h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #333;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Grid layout for items */
+.item-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+/* Card styling */
+.item-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.item-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Image inside card */
+.item-image {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+/* Card details */
+.item-details {
+  padding: 15px;
+}
+
+.item-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #1a1a1a;
+}
+
+.item-description {
+  font-size: 0.95rem;
+  margin-bottom: 8px;
+  color: #555;
+  height: 40px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.item-location,
+.item-date,
+.item-contact {
+  font-size: 0.85rem;
+  margin-bottom: 4px;
+  color: #666;
+}
+
+.item-status {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin-top: 5px;
+}
+
+/* Status colors */
+.item-status.lost {
+  background-color: #ffe5e5;
+  color: #d32f2f;
+}
+
+.item-status.found {
+  background-color: #e5ffe5;
+  color: #388e3c;
+}
+
+/* Pagination */
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+  gap: 8px;
+}
+
+.pagination button {
+  padding: 8px 14px;
+  border: none;
+  border-radius: 6px;
+  background-color: #f0f0f0;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.2s ease;
+}
+
+.pagination button:hover {
+  background-color: #dcdcdc;
+}
+
+.pagination button.active {
+  background-color: #007bff;
+  color: #fff;
+}

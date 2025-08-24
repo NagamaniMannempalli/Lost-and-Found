@@ -1,0 +1,55 @@
+.item-card {
+  border: 1px solid #ccc;
+  padding: 12px;
+  border-radius: 8px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #fff;
+}
+
+.item-image-wrapper {
+  position: relative;
+}
+
+.item-image {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+}
+
+.status-badge {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  padding: 4px 8px;
+  border-radius: 4px;
+  color: white;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+}
+
+.status-badge.lost {
+  background-color: #e74c3c;
+}
+
+.status-badge.found {
+  background-color: #2ecc71;
+}
+
+.delete-btn {
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 8px;
+  font-size: 0.9rem;
+  transition: 0.2s;
+}
+
+.delete-btn:hover {
+  background-color: #c0392b;
+}
