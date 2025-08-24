@@ -1,70 +1,109 @@
-# Getting Started with Create React App
+# LostLink - Lost and Found Application
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Description
 
-## Available Scripts
+LostLink is a React-based web application that allows users to report and browse lost and found items. Users can report items with details like title, description, location, date, status (Lost/Found), image, and contact email. Items are displayed in an organized card layout with pagination, and a search feature helps quickly locate items.
 
-In the project directory, you can run:
+## Features
 
-### `npm start`
+* User authentication (Login/Register)
+* Report lost and found items
+* View lost items
+* View found items
+* Search items by title
+* Pagination for item listing
+* Responsive UI
+* Persistent data using localStorage
+* Navbar and footer visible on all pages except Login/Register
+* Delete functionality on item cards (optional, can be extended)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Tech Stack
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+* React.js
+* React Router DOM
+* Context API for state management
+* LocalStorage for data persistence
+* HTML, CSS
 
-### `npm test`
+## Folder Structure
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```
+lost-found/
+│
+├── public/
+│   └── index.html
+│
+├── src/
+│   ├── components/
+│   │   ├── ItemCard.js
+│   │   ├── Navbar.js
+│   │   └── Footer.js
+│   │
+│   ├── context/
+│   │   ├── AuthContext.js
+│   │   └── ItemContext.js
+│   │
+│   ├── pages/
+│   │   ├── Home.js
+│   │   ├── LostItems.js
+│   │   ├── FoundItems.js
+│   │   ├── ReportItems.js
+│   │   ├── Login.js
+│   │   └── Register.js
+│   │
+│   ├── utils/
+│   │   ├── dummyData.js
+│   │   ├── localStorage.js
+│   │   └── validate.js
+│   │
+│   ├── App.js
+│   ├── index.js
+│   ├── Home.css
+│   ├── ItemPage.css
+│   ├── Navbar.css
+│   ├── Footer.css
+│   ├── Auth.css
+│   └── ReportItems.css
+│
+├── package.json
+└── README.md
+```
 
-### `npm run build`
+## How to Run
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. Clone the repository using SSH:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+   ```bash
+   git clone git@github.com:NagamaniMannempalli/Lost-and-Found.git
+   ```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+2. Navigate to the project folder:
 
-### `npm run eject`
+   ```bash
+   cd lost-found
+   ```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+3. Install dependencies:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+   ```bash
+   npm install
+   ```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+4. Start the development server:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+   ```bash
+   npm start
+   ```
 
-## Learn More
+5. Open the app in your browser at [http://localhost:3000](http://localhost:3000)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Notes
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+* Data is stored in **localStorage**, so refreshing the page keeps the items persistent.
+* Add your own image URLs while reporting items to see images in cards.
+* Use the search bar to quickly find items by title.
+* On pages like Lost and Found, if no items match the search or there are no items, a message "Item not found" will be displayed.
 
-### Code Splitting
+## License
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This project is open-source and free to use.
